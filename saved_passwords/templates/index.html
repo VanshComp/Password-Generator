@@ -1,0 +1,333 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Arima&family=Cookie&family=Dancing+Script&family=EB+Garamond:ital,wght@1,500&family=Open+Sans:wght@300&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Arima&family=Cookie&family=Dancing+Script&family=EB+Garamond:ital,wght@1,500&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        width: 100%;
+        background-color: #000;
+    }
+    header {
+        background-color:hsl(230, 17%, 14%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+    }
+    header > h3 {
+        width: 20%;
+        color: #fff;
+        font-family: 'Cookie', cursive;
+        font-style: italic;
+        font-size: 2em;
+    }
+    nav {
+        width: 40%;
+    }
+    nav > ul {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 20%;
+    }
+    nav > ul > li > a, div > a {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Arima', cursive;
+        font-size: 0.9em;
+    }
+    li {
+        list-style: none;
+    }
+    header > div {
+        width: 5%;
+        position: relative;
+        top: 20%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #menu {
+        width: 100%;
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210605/pngtree-ethical-hacking-matrix-technological-background-vector-image_725998.jpg);
+        background-size: cover;
+        padding: 100px 0px 10px;
+        text-align: center;
+        height: 400px;
+    }
+    #menu > p, #menu > h2, h2 > span {
+        animation-name: scale-up-center;
+        animation-duration: 1.7s;
+    }
+    @keyframes scale-up-center {
+        0% {transform:scale(.5)}
+        100% {transform:scale(1)}
+    }
+    #menu > h2 {
+        font-family: 'Cookie', cursive;
+        font-weight: bolder;
+        font-size: 3.5em;
+        color: #fff;
+        padding: 50px auto 10px;
+    }
+    span {
+        color: red;
+        text-decoration: line-through;
+        text-decoration-color: red;
+    }
+    #menu > p {
+        font-family: 'Arima', cursive;
+        color: rgb(245, 245, 10);
+        padding-bottom: 30px;
+    }
+    #menu > button, #home > button {
+        width: 150px;
+        height: 35px;
+        background-color:rgb(245, 245, 10);
+        color: #000;
+        font-weight: bolder;
+        font-family: 'Arima', cursive;
+        font-size: 0.9em;
+      animation: slide-rotate-horizontal-top 1.2s linear both;
+    }
+    @keyframes slide-rotate-horizontal-top {
+      0% {transform: translateY(-150px)rotateX(-90deg)}
+      100% {transform: translateY(0)rotateX(0deg)}
+    }
+    #home {
+        padding-left: 50px;
+        padding-top: 10px;
+        background-color:hsl(230, 17%, 14%);
+        background-size: cover;
+        color: #fff;
+        padding-bottom: 15px;
+    }
+    .welcome {
+        font-family: 'Arima', cursive;
+    }
+    #home > h3 {
+        color:rgb(245, 245, 10);
+        font-style: normal;
+        font-size: 3em;
+        font-family: 'Cookie', cursive;
+    }
+    #texts {
+        display: flex;
+        padding: 40px;
+        justify-content: space-between;
+        width: 900px;
+        font-family: 'Arima', cursive;
+    }
+    .text-one, .text-two {
+        width: 400px;
+        line-height: 2;
+    }
+    #contact {
+        color: #fff;
+        padding: 30px;
+        background-color:hsl(230, 17%, 14%);
+    }
+    #contact > p {
+        font-family: 'Cookie', cursive;
+        font-size: 1.5em;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: rgb(245, 245, 10);
+    }
+    .socials {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 40px;
+    }
+    @media screen and (min-width: 967px) and (max-width: 2030px) {
+      .hamburger, .menu {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 600px) and (max-width: 966px) {
+       header {
+        height: 50px;
+    }
+      .hamburger, .menu {
+    display: none;
+      }
+    header > h3 {
+        width: 25%;
+        font-size: 1.6em;
+    }
+    nav {
+        width: 50%;
+    }
+    nav > ul {
+        top: 20%;
+    }
+    nav > ul > li > a, div > a {
+        font-size: 0.8em;
+    }
+    header > div {
+        width: 10%;
+    }
+    #menu {
+        padding: 100px 0px 10px;
+        height: 400px;
+    }
+    #menu > h2 {
+        font-size: 2.5em;
+        padding: 70px auto 10px;
+    }
+    #menu > p {
+        padding-bottom: 60px;
+    }
+    #home {
+        padding: 5px;
+    }
+    #home > h3 {
+        font-size: 2.5em;
+    }
+    #texts {
+        display: flex;
+        padding: 40px;
+        justify-content: space-evenly;
+        width: 600px;
+    }
+    .text-one, .text-two {
+        width: 260px;
+        line-height: 2;
+    }
+    #food > h3, #orders > h3, #offer > h3 {
+        font-size: 2.3em;
+    }
+    #dishes {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 470px 470px 470px;
+        text-align: center;
+    }
+    .dish-one, .dish-two, .dish-three, .dish-four, .dish-five, .dish-six {
+        width: 280px;
+        padding: 10px;
+    }
+    img {
+        width: 270px;
+    }
+    #steps {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 300px 300px;
+        text-align: center;
+        grid-gap: 10px;
+        padding-top: 45px;
+    }
+    #combo {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-left: 20px; 
+    }
+    .combo-two {
+        display: flex;
+        padding-left: 20px;
+    }
+    .img-div > img {
+        height: 200px;
+        width: 200px;
+    }
+    } 
+</style>
+<body>
+   <header>
+    <h3>Password's Cuisine</h3>
+    <nav>
+        <ul>
+            <li><a href="#menu">Login</a></li>
+            <li><a href="#about">Register</a></li>
+            <li><a href="#orders">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-icons">
+       <a href="www.google.com"> 
+           <i class="fas fa-search"></i>
+       </a>
+    </div>
+    </header>
+   <main>
+    <section id="menu">
+        <h2>
+            Count the Memories, not the <span>Passwords</span>
+        </h2>
+        <p>Non-Compromised, Balanced and Stable Passwords</p>
+        <a href="{{ url_for('services') }}">
+            <button style="background-color: yellow; color: black; width: 150px; height: 50px; font-size: x-large;">Services</button>
+        </a>
+        </section>
+        <section id="home">
+        <p class="welcome">
+            Welcome to
+        </p>
+        <h3>Password's Cuisine</h3>
+        <div id="texts">
+        <div class="text-one">
+            <p>
+                Password Cuisine" is a culinary concept or approach where access to recipes, cooking techniques, or even dining experiences is restricted or limited by requiring a password for entry. This concept is often implemented in various forms, such as exclusive dining clubs, private cooking classes, or online recipe platforms.
+            </p>
+        </div>
+        <div class="text-two">
+            <p>
+                The idea behind Password Cuisine is to create a sense of exclusivity, mystery, or intrigue around food-related experiences. It may involve hidden or secret locations, unique culinary creations, or specialized knowledge shared only with those who have the password.
+            </p>
+        </div>
+        </div>
+        <button>Find Out More</button>
+    </section>
+    <section id="contact">
+        <p>Please Contact Us On Our Socials</p>
+        <div class="socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </section>
+   </main>
+   <script>
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger = document.querySelector(".hamburger");
+    const closeIcon = document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
+
+    function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+    }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    menuItems.forEach(
+    function(menuItem) {
+    menuItem.addEventListener("click", toggleMenu);
+    })
+   </script>
+</body>
+</html>

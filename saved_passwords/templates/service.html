@@ -1,0 +1,142 @@
+<html>
+<head>
+    <title>Our Services</title>
+    <link rel="stylesheet" href="service.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+        background-image: url(https://th.bing.com/th/id/R.c60a7d61a15908a28721e51e8086ca1e?rik=O3UTcSW4HwpQcQ&riu=http%3a%2f%2fprestigeinteractive.com.ph%2fimg%2fbg-img%2fservices-background-1.jpg&ehk=%2b8kNsXtzP7hJpxtHIbZMVT0bVg4oFWwmYrDaRshEgYo%3d&risl=&pid=ImgRaw&r=0);
+      }
+      .service-grid {
+          background: #fcfcfc;
+        }
+         .service-title h4 {
+          position: relative;
+          display: inline-block;
+        }
+        .service-icon {
+          position: relative;
+        }
+        .service-title p {
+          padding: 0 190px;
+          margin-bottom: 10px;
+        }
+        .about-info-text h2 {
+          margin-bottom: 23px;
+          text-transform: capitalize;
+          font-weight: 700;
+          line-height: .9;
+        }
+        .about-info-text p {
+          padding: 0 100px;
+          font-size: 18px;
+          margin-bottom: 26px;
+            position: relative;
+        }
+        .about-content p {
+          margin-bottom: 0;
+        }
+        .about-info-text a {
+          margin-bottom: 20px;
+            position: relative;
+        }
+        .service-icon i {
+          font-size: 40px;
+          color: #e8bc00;
+          margin-bottom: 20px;
+          display: inline-block;
+        }
+        .service-wrap {
+          border: 1px solid #e6e6e6;
+          padding: 50px 30px;
+            position: relative;
+        }
+        .service-wrap p{
+            position: relative;
+        }
+        .service-wrap:hover {
+          background-image: url(https://i.ibb.co/mykzQks/services1.jpg);
+          background-size: cover;
+          background-position: center center;
+          background-attachment: local;
+          transition: all .5s;
+        }
+        .service-wrap:hover:before {
+          background: rgba(242, 237, 237, 0.29);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0px;
+          content: "";
+          top: 0;
+          opacity: 1;
+        }
+        .service-wrap:hover h2,.service-wrap:hover p{
+          color: #000000;
+        }
+        .service-wrap h2 {
+          font-weight: 600;
+          color: #000000;
+          margin-bottom: 17px;
+          font-size: 38px;
+          text-transform: capitalize;
+            position: relative;
+        }
+        .service-wrap a {
+          font-size: 20px;
+          font-weight: 600;
+          position: relative;
+          color: coral;
+        }
+</style>
+<body>
+    <section class="service-grid pb-5 pt-5" style="background-image: url(https://th.bing.com/th/id/R.c60a7d61a15908a28721e51e8086ca1e?rik=O3UTcSW4HwpQcQ&riu=http%3a%2f%2fprestigeinteractive.com.ph%2fimg%2fbg-img%2fservices-background-1.jpg&ehk=%2b8kNsXtzP7hJpxtHIbZMVT0bVg4oFWwmYrDaRshEgYo%3d&risl=&pid=ImgRaw&r=0);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center mb-4">
+                    <div class="service-title">
+                        <h1 style="color: rgb(255, 255, 255);"><b>Our Services</b></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h2>Password Generator</h2>
+                        <p>
+                        The password generator uses JavaScript to dynamically generate secure passwords based on user preferences such as length and character types. It employs functions to randomly select lowercase letters, uppercase letters, numbers, and symbols, ensuring a diverse character set. The generator provides real-time feedback on password strength, validating factors like length and inclusion of different character types.</p>
+                        <a href={{url_for('generate_page')}}>Generate</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="far fa-chart-bar"></i>
+                        </div>
+                        <h2>Password analyzer</h2>
+                        <p>. The analyzer dynamically updates as users type, providing immediate feedback on the password's security level. It encourages users to create stronger passwords by highlighting areas where improvements can be made, such as adding uppercase letters, numbers, or special characters. Additionally, it enhances password security awareness by educating users about password requirements and best practices.</p>
+                        <a href={{url_for('analyze_page')}}>Analyze</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-3">
+                    <div class="service-wrap">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h2>Password validation</h2>
+                        <p>
+                            Password validation is a process that ensures passwords meet certain criteria, such as length, complexity, and character requirements, before allowing them to be used. It typically involves checking for elements like lowercase and uppercase letters, numbers, and special characters. Password validation helps enhance security by preventing weak or easily guessable passwords.</p>
+                        <a href={{url_for('validate_page')}}>Validate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="service.js"></script>
+</body>
+</html>

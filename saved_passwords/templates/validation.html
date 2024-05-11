@@ -1,0 +1,152 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        /* Removed unnecessary styles and improved formatting */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            background-image: url(https://www.wallpapertip.com/wmimgs/171-1712831_ultra-hd-wallpapers-for-laptop.jpg);
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+       .container {
+            background-color: grey;
+            height: 300px;
+            width: 350px;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: solid 5px black;
+        }
+
+       .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+       .field {
+            position: relative;
+            height: 65px;
+            width: 100%;
+            display: flex;
+            background: #f5f5f5;
+            margin-bottom: 15px;
+            border: solid 5px black;
+        }
+
+       .field span {
+            color: #222;
+            width: 40px;
+            line-height: 45px;
+        }
+
+       .field input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: #222;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+       .show {
+            position: absolute;
+            right: 13px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #222;
+            display: none;
+            cursor: pointer;
+        }
+
+       .pass {
+            text-align: left;
+            margin: 10px 0;
+        }
+
+       .pass a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+       .pass:hover a {
+            text-decoration: underline;
+        }
+
+       .field input[type="submit"] {
+            background: #3498db;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            border: solid 5px black;
+        }
+
+       .field input[type="submit"]:hover {
+            background: #2691d9;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <h2>VALIDATION</h2>
+      <form id="login-form" action="/validate" method="post">
+          <div class="field">
+              <span class="fa fa-user"></span>
+              <input type="text" class="Username" required placeholder="Username" name="usrname" />
+          </div>
+          <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input type="password" class="pass-key" required placeholder="Password" name="psw" />
+              <span class="show" id="show-hide">SHOW</span>
+          </div>
+          <div class="field" style="background-color: grey;">
+              <input type="submit" value="SUBMIT" />
+          </div>
+      </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#validate-form').on('submit', function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: '/validate',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            alert(response.message);
+                            setTimeout(function() {
+                                window.location.href = '/';
+                            }, 1000);
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('Error occurred while validating the password.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
